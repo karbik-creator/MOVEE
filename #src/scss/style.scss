@@ -1,0 +1,154 @@
+@import "fonts.scss";
+@import "./modules/_vars.scss";
+@import "nullstyle.scss";
+@import "./modules/_vars.scss";
+@import "./modules/_header.scss";
+@import "./modules/_intro.scss";
+@import "./modules/_steps.scss";
+@import "./modules/_prices.scss";
+@import "./modules/_slider.scss";
+@import "./modules/_reviews.scss";
+@import "./modules/_form.scss";
+@import "./modules/_map.scss";
+@import "./modules/_footer.scss";
+@import "media.scss";
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 $color_1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  color: $color_2;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color_2;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color_2;
+}
+
+.button__order {
+  z-index: 20;
+  width: 250px;
+  height: 50px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color_2;
+  background-color: $color_1;
+
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    animation: pulse 1s;
+    box-shadow: 0 0 0 20px rgba(#fff, 0);
+  }
+}
+
+.btn__link {
+  display: inline-block;
+  padding: 13px 64px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color_2;
+  background-color: transparent;
+  border: 1px solid $color_2;
+
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: $color_3;
+    color: #fff;
+    box-shadow: inset 0 0 0 28px $color_3;
+  }
+}
+
+.btn__main__order {
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+  width: 250px;
+  height: 50px;
+  padding-left: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color_4;
+  background: none;
+
+  transform: translate(-7px, -7px);
+  transition: transform 0.3s linear;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -7px;
+    bottom: 0;
+    background: none;
+    border: 2px solid $color_4;
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    transform: translate(7px, 7px);
+    transition: transform 0.3s linear;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: -7px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: $color_3;
+    z-index: -1;
+  }
+  &:hover::before {
+    transform: translate(0px, 0px);
+  }
+  &:hover {
+    transform: translate(0px, 0px);
+  }
+}

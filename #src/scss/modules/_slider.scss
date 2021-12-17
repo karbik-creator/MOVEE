@@ -1,0 +1,174 @@
+@import "_vars.scss";
+
+.catalog {
+    padding-top: 102px;
+    text-align: center;
+
+    h2 {
+        padding-bottom: 15px;
+    }
+
+    h3 {
+        padding-bottom: 60px;
+    }
+
+    .tabs {
+        margin-bottom: 60px;
+
+        &__item {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+
+            color: #333333;
+            padding: 13px 63px;
+            border: 1px solid #ebebeb;
+
+            & + .tabs__item {
+                margin-left: 19px;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                border: 1px solid $color_1;
+            }
+
+            &.active {
+                border: 1px solid $color_1;
+            }
+        }
+
+        &__body {
+            .slider__container {
+                transition: all 2s;
+                .slider__wrapper {
+                    .slick-list {
+                        overflow: hidden; 
+                    }
+
+                    .slick-track {
+                        display: flex;
+                        min-width: 0;
+                    }
+
+                    .slider__item {
+                        display: flex;
+                        justify-content: space-between;
+                        text-align: left;
+                        min-width: 0;
+                        width: 1096px !important;
+                        padding-left: 20px;
+                        transition: all 1s;
+
+                        p {
+                            display: none;
+                            font-weight: 300;
+                            font-size: 12px;
+                            line-height: 15px;
+                            color: $color_2;
+                            margin-bottom: 31px;
+                        }
+
+                        img {
+                            max-height: 453px;
+                            max-width: 641px;
+                        }
+
+                        h3 {
+                            padding-bottom: 37px;
+                            padding-top: 53px;
+                        }
+
+                        &__list {
+                            margin-bottom: 35px;
+
+                            &__item {
+                                position: relative;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 21px;
+                                color: #333333;
+
+                                padding-left: 30px;
+
+                                & + .slider__item__list__item {
+                                    padding-top: 28px;
+                                }
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    background: transparent url(../img/checkIcon_black.svg) no-repeat;
+                                    width: 14px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .prev {
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                top: 42%;
+                width: 10px;
+                height: 20px;
+            }
+
+            .next {
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                top: 42%;
+                transform: rotate(180deg);
+                width: 10px;
+                height: 20px;
+            }
+
+            .tabs__block {
+                position: relative;
+                padding: 0 107px 0 90px;
+                display: none;
+                & .slider__item__text .button__order {
+                    display: block;
+                }
+                .button__order {
+                    display: none;
+                }
+
+                &.tab__content-active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .slider__container .slider__wrapper.slick-initialized.slick-slider ul.slick-dots {
+        display: none;
+        margin-bottom: 20px;
+
+        & button {
+            background-color: #333333;
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            color: transparent;
+            margin-right: 15px;
+            position: relative;
+        }
+
+        & li.slick-active button::after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: -3px;
+            bottom: -3px;
+            border-radius: 50%;
+            border: 2px #fed100 solid;
+        }
+    }
+}

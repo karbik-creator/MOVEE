@@ -1,0 +1,26 @@
+<form class="form" id="formMain">
+    <div class="container">
+        <!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Site Name">
+		<input type="hidden" name="admin_email" value="car1na.p@yandex.ru">
+		<input type="hidden" name="form_subject" value="Заявка с сайта">
+		<!-- END Hidden Required Fields -->
+        <div class="form__inner">
+            <h3>Закажи переезд прямо сейчас</h3>
+            <p>Мы перезвоним в течении 10 секунд</p>
+            <div class="form__wrapper">
+                <div class="form__input">
+                    <input type="text" name="Name" id="formName" placeholder="Ваше имя" class="form__input__item _req _name">
+                    <input type="text" name="Phone" id="formPhone" placeholder="Телефон" class="form__input__item _req _phone">
+                </div>
+                <div class="form__btn">
+                    <button type="submit" class="btn__main__order">Перезвонить мне</button>
+                    <div class="checkbox">
+                        <input type="checkbox" name="agreement" id="formAgreement" class="checkbox__input _req">
+                        <label for="formAgreement" class="checkbox__label">Даю согласие на обработку данных</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

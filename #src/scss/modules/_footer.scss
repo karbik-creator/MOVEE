@@ -1,0 +1,126 @@
+@import "./vars";
+
+.footer {
+    background-color: $color_1;
+
+    &__inner {
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        &__logo {
+            margin-bottom: 44px;
+        }
+
+        &__list {
+            width: 238px;
+
+            li + li {
+                padding-top: 36px;
+            }
+        }
+
+        &__list__item {
+            position: relative;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130.4%;
+            color: #0e0f12;
+
+            &+.footer__info__list__item{
+                display: inline-block;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 1px;
+                bottom: -2px;
+                left: 50%;
+                transition: all 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                    left: 0;
+                    background: $color_2;
+                }
+            }
+        }
+    }
+
+    &__menu__list__item {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+
+        a {
+            position: relative;
+            color: $color_2;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 1px;
+                bottom: -2px;
+                left: 50%;
+                transition: all 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                    left: 0;
+                    background: $color_2;
+                }
+            }
+        }
+
+        & + & {
+            padding-top: 15px;
+        }
+    }
+
+    &__sociallink {
+        display: inline-block;
+
+        &__email {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: $color_2;
+            border-bottom: 1px solid $color_2;
+        }
+
+        &__icon {
+            margin-bottom: 20px;
+            a + a {
+                padding-left: 31px;
+            }
+        }
+    }
+
+    &__contact {
+        text-align: center;
+
+        .btn__link {
+            display: block;
+            width: 100%;
+            padding: 10px 30px;
+            margin-bottom: 5px;
+        }
+
+        &__phone {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: $color_2;
+            border-bottom: 1px solid $color_2;
+        }
+    }
+}

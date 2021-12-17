@@ -1,0 +1,79 @@
+@import "./vars";
+
+.intro {
+    background-color: $color_1;
+    margin-bottom: 96px;
+
+    &__inner {
+        max-width: 1463px;
+        margin: 0 auto;
+
+        background-image: url(../img/Rectangle2.png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__content {
+        padding-top: 63px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 546px;
+
+        p {
+            font-weight: 700;
+            font-size: 70px;
+            line-height: 126.9%;
+            font-family: "Montserrat", sans-serif;
+            color: $color_2;
+        }
+
+        p:nth-child(2) {
+            font-weight: 600;
+            font-size: 30px;
+        }
+
+        &__footer__list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 77px;
+            margin-bottom: 83px;
+
+            &__item {
+                display: flex;
+            }
+
+            .item__text {
+                padding-left: 10px;
+
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: $color_2;
+            }
+        }
+    }
+
+    &__back {
+        padding-left: 42px;
+        min-height: 588px;
+    }
+
+    .btn__mobile__order {
+        display: none;
+        text-align: center;
+        width: 387px;
+        height: 60px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: $color_4;
+        background: $color_3;
+    }
+}
